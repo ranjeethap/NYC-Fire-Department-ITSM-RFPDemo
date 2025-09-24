@@ -36,7 +36,11 @@ This comprehensive ITSM demo system was built specifically for the NYC Fire Depa
 
 ### 1. Clone and Setup
 ```bash
-cd /Users/ranjeeth/Documents/Projects/NYFD-RFP/itsm-demo
+# Clone the repository
+git clone https://github.com/ranjeethap/NYC-Fire-Department-ITSM-RFPDemo.git
+cd NYC-Fire-Department-ITSM-RFPDemo/itsm-demo
+
+# Install dependencies
 npm install
 ```
 

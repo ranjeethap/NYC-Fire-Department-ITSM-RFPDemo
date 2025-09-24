@@ -2,7 +2,9 @@
 
 ## ⚡ 30-Second Setup
 ```bash
-cd /Users/ranjeeth/Documents/Projects/NYFD-RFP/itsm-demo
+# Clone and setup
+git clone https://github.com/ranjeethap/NYC-Fire-Department-ITSM-RFPDemo.git
+cd NYC-Fire-Department-ITSM-RFPDemo/itsm-demo
 npm install && npm run seed
 API_KEY=demo_api_key_12345 npm run dev
 ```
