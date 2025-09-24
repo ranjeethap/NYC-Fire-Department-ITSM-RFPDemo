@@ -13,18 +13,29 @@ A complete ITSM (IT Service Management) data integration demo system showcasing 
 - **Docker Support**: Easy deployment with Docker and Docker Compose
 - **Authentication**: API key-based security
 - **Rate Limiting**: 120 requests per minute
-- **Realistic Data**: 7,150+ sample records with NYC Fire Department context
+- **Demo Data**: 7,150+ realistic sample records generated using Faker.js for demonstration purposes
 
-## 📊 Data Overview
+## 📊 Demo Data Overview
 
-| Resource | Records | Description |
-|----------|---------|-------------|
-| Incidents | 550 | IT incidents and service disruptions |
-| Service Requests | 300 | User requests for IT services |
-| Assets | 200 | IT equipment and hardware |
-| Change Requests | 100 | IT change management |
-| Configuration Items | 5,000 | IT infrastructure components |
-| Work Logs | 1,000 | Time tracking and work notes |
+**⚠️ IMPORTANT: All data in this demo is generated using Faker.js for demonstration purposes only. This is NOT real NYC Fire Department data.**
+
+| Resource | Records | Description | Data Source |
+|----------|---------|-------------|-------------|
+| Incidents | 550 | IT incidents and service disruptions | Faker.js generated |
+| Service Requests | 300 | User requests for IT services | Faker.js generated |
+| Assets | 200 | IT equipment and hardware | Faker.js generated |
+| Change Requests | 100 | IT change management | Faker.js generated |
+| Configuration Items | 5,000 | IT infrastructure components | Faker.js generated |
+| Work Logs | 1,000 | Time tracking and work notes | Faker.js generated |
+
+### 🎭 Demo Data Characteristics
+
+- **Realistic Context**: Data uses NYC Fire Department locations and terminology
+- **Authentic Format**: Proper numbering schemes (INC100000, REQ200000, etc.)
+- **Business Logic**: Realistic state progressions and relationships
+- **Varied Content**: Diverse descriptions, names, and technical details
+- **Time-based**: Recent dates and realistic timestamps
+- **Interconnected**: Work logs reference actual incidents/requests/changes
 
 ## 🛠 Quick Start
 
@@ -136,6 +147,31 @@ The collection includes:
 - Example requests for all endpoints
 - Automated tests for response validation
 - Performance tests (<200ms response time)
+
+## 🎭 Demo Data Generation
+
+This demo uses **Faker.js** to generate realistic sample data for demonstration purposes:
+
+### Data Generation Process
+- **Library**: [@faker-js/faker](https://fakerjs.dev/) - Industry standard for generating fake data
+- **Script**: `src/scripts/seed.js` - Generates all sample data
+- **Command**: `npm run seed` - Populates the database
+- **Reset**: `npm run reset` - Clears all data
+
+### Generated Data Types
+- **Names**: Realistic employee names (J.Smith, A.Johnson, etc.)
+- **Dates**: Recent timestamps with realistic business logic
+- **Descriptions**: Contextual IT service descriptions
+- **Technical Data**: IP addresses, MAC addresses, serial numbers
+- **Business Data**: Costs, warranty dates, approval statuses
+- **Relationships**: Work logs linked to actual incidents/requests
+
+### Data Quality Features
+- **NYC Fire Department Context**: Uses actual locations and terminology
+- **Realistic Numbering**: Proper ITSM numbering schemes
+- **State Progression**: Logical incident/request lifecycle flows
+- **Time Relationships**: Consistent date sequences
+- **Data Variety**: Diverse content to showcase filtering/search
 
 ## 🔄 DMZ Sync Service
 

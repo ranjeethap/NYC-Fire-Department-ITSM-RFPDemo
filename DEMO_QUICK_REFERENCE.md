@@ -1,5 +1,7 @@
 # 🚀 NYC Fire Department ITSM Demo - Quick Reference
 
+**⚠️ Demo Data Notice**: All data is generated using Faker.js for demonstration purposes only.
+
 ## ⚡ 30-Second Setup
 ```bash
 # Clone and setup
@@ -19,7 +21,7 @@ API_KEY=demo_api_key_12345 npm run dev
 Authorization: Bearer demo_api_key_12345
 ```
 
-## 📊 Demo Data Summary
+## 📊 Demo Data Summary (Faker.js Generated)
 - **Incidents**: 550 records
 - **Service Requests**: 300 records  
 - **Assets**: 200 records

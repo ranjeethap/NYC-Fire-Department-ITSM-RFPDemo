@@ -1,3 +1,20 @@
+/**
+ * NYC Fire Department ITSM Demo - Database Seeding Script
+ * 
+ * ⚠️ IMPORTANT: This script generates realistic sample data using Faker.js
+ * for demonstration purposes only. This is NOT real NYC Fire Department data.
+ * 
+ * Generated data includes:
+ * - 550 Incidents
+ * - 300 Service Requests  
+ * - 200 Assets
+ * - 100 Change Requests
+ * - 5,000 Configuration Items
+ * - 1,000 Work Logs
+ * 
+ * Total: 7,150+ realistic sample records
+ */
+
 import Database from 'better-sqlite3';
 import { faker } from '@faker-js/faker';
 import { v4 as uuidv4 } from 'uuid';

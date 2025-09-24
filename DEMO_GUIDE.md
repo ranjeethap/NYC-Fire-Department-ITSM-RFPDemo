@@ -4,6 +4,8 @@
 
 This guide provides detailed step-by-step instructions for running the NYC Fire Department ITSM Demo system. The demo showcases a complete IT Service Management data integration system with automated DMZ database sync and RESTful API methods.
 
+**⚠️ IMPORTANT: This demo uses Faker.js to generate realistic sample data for demonstration purposes only. All data is synthetic and NOT real NYC Fire Department information.**
+
 ## 📋 Prerequisites
 
 ### System Requirements
@@ -44,6 +46,8 @@ Seeded changes: 100
 Seeded configuration items: 5000
 Seeded work logs: 1000
 ```
+
+**Note**: This generates 7,150+ realistic sample records using Faker.js for demonstration purposes only.
 
 ### Step 4: Start the Server
 ```bash
@@ -128,7 +132,7 @@ Open your browser and visit:
    ```
 
 **Demo Points**:
-- Show realistic NYC Fire Department incident data
+- Show realistic NYC Fire Department incident data (generated with Faker.js)
 - Demonstrate filtering capabilities
 - Highlight response times (<200ms)
 - Show pagination and metadata
@@ -295,7 +299,7 @@ Open your browser and visit:
 ### Opening (2 minutes)
 - "Today I'll demonstrate our ITSM data integration solution for the NYC Fire Department"
 - "This system provides automated data delivery through both DMZ database sync and RESTful API methods"
-- "We have 7,150+ realistic records across 6 ITSM resource types"
+- "We have 7,150+ realistic sample records across 6 ITSM resource types, all generated using Faker.js for demonstration purposes"
 
 ### Core Demo (15 minutes)
 1. **System Overview** (2 min)
