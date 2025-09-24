@@ -152,7 +152,7 @@ Open your browser and visit:
 3. **Assets by Location**
    ```bash
    curl -H "Authorization: Bearer demo_api_key_12345" \
-     "http://localhost:3000/api/v1/assets?location=Command Center&limit=5"
+     "http://localhost:3000/api/v1/assets?location=Command%20Center&limit=5"
    ```
 
 4. **Search by Model**
@@ -307,7 +307,7 @@ Open your browser and visit:
 
 3. **Asset Management** (3 min)
    - Display active servers
-   - Filter by location (Command Center)
+   - Filter by location (Command%20Center)
    - Show asset details
 
 4. **Change Management** (3 min)

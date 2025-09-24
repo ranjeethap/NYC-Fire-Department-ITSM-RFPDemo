@@ -80,7 +80,7 @@ Authorization: Bearer demo_api_key_12345
 | `/api/v1/requests` | GET | Service requests & user needs | `?category=Access Request` |
 | `/api/v1/assets` | GET | IT equipment & hardware tracking | `?asset_type=Server&status=Active` |
 | `/api/v1/changes` | GET | Change management & approvals | `?state=In Progress&risk_level=High` |
-| `/api/v1/configuration-items` | GET | Infrastructure components | `?ci_type=Server&location=Command Center` |
+| `/api/v1/configuration-items` | GET | Infrastructure components | `?ci_type=Server&location=Command%20Center` |
 | `/api/v1/worklogs` | GET | Time tracking & work notes | `?parent_type=incident&worked_by=J.Smith` |
 | `/api/v1/dashboard/stats` | GET | System statistics & sync status | No parameters |
 
@@ -100,7 +100,7 @@ curl -H "Authorization: Bearer demo_api_key_12345" \
 
 # Active servers in Command Center
 curl -H "Authorization: Bearer demo_api_key_12345" \
-  "http://localhost:3000/api/v1/assets?asset_type=Server&status=Active&location=Command Center"
+  "http://localhost:3000/api/v1/assets?asset_type=Server&status=Active&location=Command%20Center"
 
 # System statistics
 curl -H "Authorization: Bearer demo_api_key_12345" \
@@ -130,7 +130,7 @@ curl -H "Authorization: Bearer demo_api_key_12345" \
 
 # Command Center assets
 curl -H "Authorization: Bearer demo_api_key_12345" \
-  "http://localhost:3000/api/v1/assets?location=Command Center&limit=5"
+  "http://localhost:3000/api/v1/assets?location=Command%20Center&limit=5"
 ```
 
 ### 🔄 Scenario 3: Change Management (4 min)

@@ -37,7 +37,7 @@ curl -H "Authorization: Bearer demo_api_key_12345" \
 ### Command Center Servers
 ```bash
 curl -H "Authorization: Bearer demo_api_key_12345" \
-  "http://localhost:3000/api/v1/assets?asset_type=Server&location=Command Center&limit=5"
+  "http://localhost:3000/api/v1/assets?asset_type=Server&location=Command%20Center&limit=5"
 ```
 
 ### High-Risk Changes
