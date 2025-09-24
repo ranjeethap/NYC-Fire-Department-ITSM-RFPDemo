@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  itsm-demo:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - API_KEY=demo_api_key_12345
+      - DB_PATH=database/itsm.db
+    volumes:
+      - ./database:/app/database
+      - ./postman:/app/postman
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

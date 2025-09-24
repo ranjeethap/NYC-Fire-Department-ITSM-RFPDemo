@@ -1,0 +1,556 @@
+{
+  "info": {
+    "name": "NYC Fire Department ITSM Demo API",
+    "description": "Complete Postman collection for ITSM Demo API with examples and tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{api_key}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "api_key",
+      "value": "demo_api_key_12345",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": ["{{base_url}}"],
+          "path": ["health"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Incidents",
+      "item": [
+        {
+          "name": "Get All Incidents",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/incidents?limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "incidents"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get High Priority Incidents",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/incidents?priority=High&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "incidents"],
+              "query": [
+                {
+                  "key": "priority",
+                  "value": "High"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get In Progress Incidents",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/incidents?state=In Progress&limit=15",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "incidents"],
+              "query": [
+                {
+                  "key": "state",
+                  "value": "In Progress"
+                },
+                {
+                  "key": "limit",
+                  "value": "15"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search Incidents",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/incidents?q=server&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "incidents"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "server"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Incidents with Pagination",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/incidents?limit=5&offset=10&sort=priority&order=asc",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "incidents"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "5"
+                },
+                {
+                  "key": "offset",
+                  "value": "10"
+                },
+                {
+                  "key": "sort",
+                  "value": "priority"
+                },
+                {
+                  "key": "order",
+                  "value": "asc"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Service Requests",
+      "item": [
+        {
+          "name": "Get All Requests",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/requests?limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "requests"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Pending Requests",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/requests?state=New&limit=15",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "requests"],
+              "query": [
+                {
+                  "key": "state",
+                  "value": "New"
+                },
+                {
+                  "key": "limit",
+                  "value": "15"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Access Requests",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/requests?q=access&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "requests"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "access"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Assets",
+      "item": [
+        {
+          "name": "Get All Assets",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/assets?limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "assets"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Active Assets",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/assets?status=Active&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "assets"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "Active"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Servers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/assets?asset_type=Server&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "assets"],
+              "query": [
+                {
+                  "key": "asset_type",
+                  "value": "Server"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Assets by Location",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/assets?location=Command Center&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "assets"],
+              "query": [
+                {
+                  "key": "location",
+                  "value": "Command Center"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Change Requests",
+      "item": [
+        {
+          "name": "Get All Changes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/changes?limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "changes"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get In Progress Changes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/changes?state=In Progress&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "changes"],
+              "query": [
+                {
+                  "key": "state",
+                  "value": "In Progress"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get High Risk Changes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/changes?q=security&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "changes"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "security"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Configuration Items",
+      "item": [
+        {
+          "name": "Get All Configuration Items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/configuration-items?limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "configuration-items"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Servers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/configuration-items?ci_type=Server&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "configuration-items"],
+              "query": [
+                {
+                  "key": "ci_type",
+                  "value": "Server"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Network Devices",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/configuration-items?ci_type=Network Device&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "configuration-items"],
+              "query": [
+                {
+                  "key": "ci_type",
+                  "value": "Network Device"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Work Logs",
+      "item": [
+        {
+          "name": "Get All Work Logs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/worklogs?limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "worklogs"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Incident Work Logs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/worklogs?parent_type=incident&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "worklogs"],
+              "query": [
+                {
+                  "key": "parent_type",
+                  "value": "incident"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Auto-set authorization header",
+          "pm.request.headers.add({",
+          "    key: 'Authorization',",
+          "    value: 'Bearer ' + pm.collectionVariables.get('api_key')",
+          "});"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Basic response validation",
+          "pm.test('Status code is 200', function () {",
+          "    pm.response.to.have.status(200);",
+          "});",
+          "",
+          "pm.test('Response has data property', function () {",
+          "    const jsonData = pm.response.json();",
+          "    pm.expect(jsonData).to.have.property('data');",
+          "    pm.expect(jsonData).to.have.property('meta');",
+          "});",
+          "",
+          "pm.test('Response time is less than 200ms', function () {",
+          "    pm.expect(pm.response.responseTime).to.be.below(200);",
+          "});"
+        ]
+      }
+    }
+  ]
+}
